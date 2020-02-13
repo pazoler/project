@@ -1,0 +1,16 @@
+{
+    "name": "tabletop/games",
+    "description": "tabletop games",
+    "type": "project",
+    "license": "mid",
+    "minimum-stability": "dev",
+    "require": {
+    	"nikic/fast-route": "^2.0@dev"
+    },
+    "autoload": {
+       "psr-4": {
+           "Tabletop\\Games\\": "src/"
+       }
+    }
+
+}

@@ -1,0 +1,101 @@
+
+
+.button {
+  background-color: #8FBC8F; 
+  border-bottom: : 1px solid black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 1px;
+  margin-right: 5px;
+}
+
+.button1 {
+	background-color: #2F4F4F;
+	
+	color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 1px;
+  align-content: center;
+  width: 100%;
+}
+
+.border-right {
+	border-right: 2px solid black;
+}
+
+
+.success {
+	color: green;
+	text-align: center;
+}
+
+
+/*Для части main*/
+
+main {
+	background: #FFFFE0;
+}
+
+
+
+.item {
+    width: 21%;
+    flex-direction: row;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    margin: 1em 0;
+}
+
+
+.item p {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: justify;
+	height: 35%;
+}
+
+.item a {
+	display: block;
+	height: 15%;
+}
+.item img {
+	height: 40%;
+}
+
+div.head {
+	display: block;
+	text-align: center;
+	font-size: 2.5em;
+	font-family: Сomic Sans MS;
+	background-color: #C0C0C0;
+	opacity: 0.9;
+}
+
+fieldset {
+	border: 0px;
+}
+
+
+div.btn-oneR div {
+	padding: 10px;
+}
+
+
+.registration {
+	margin-right: 5px;
+	padding: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+ div.open {
+ 	display: block;
+ }

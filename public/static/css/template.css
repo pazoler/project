@@ -1,0 +1,439 @@
+
+
+html {
+  height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Palatino, URW Palladio L, serif
+    ;
+    font-size: 16px;
+    color: #333333;
+    background: #FFF8DC;
+    height: 100%;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+p {
+	word-break: all;
+	word-wrap: break-word;
+}
+
+.border {
+border: 1px solid black;
+}
+
+.block {
+	display: block;
+}
+
+
+.flex {
+	display: flex;
+}
+
+.flex-1
+{
+	flex: 1;
+}
+
+.flex-2
+{
+	flex: 2;
+}
+
+.flex-3
+{
+	flex: 3;
+}
+
+.flex-4
+{
+	flex: 4;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.ai-center {
+	align-items: center;
+}
+
+.container {
+	max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+
+div.container {
+	align-items: center;	
+	color: 	white;
+	max-width: auto;
+	margin: 0 auto;
+	}
+div.container img{
+	border-radius: 10px;
+	size: 30%;
+}
+header .contacts{
+    background: #708090;
+    opacity: 0.9;
+}
+
+header .container {
+	justify-content: space-around;
+    align-items: center;
+    padding: .6em;
+}
+
+
+.background1 {
+	background: #C0C0C0;
+	margin: 0;
+	padding: 0;
+	opacity: 0.9;
+}
+
+div.name {
+	font-family: Mistral;
+	font-size: 2em;
+}
+
+header div a {
+	color: 	white;
+}
+
+
+/*Теперь вторая строка хэдера с логотипом, поиском и картинкой корзины*/
+	
+div.up2 {
+	padding: 0;
+}		
+
+div.up2 :nth-child(2) {
+		
+		text-align: center;
+		word-wrap: break-word;
+}
+div.up2 :nth-child(3) {
+		
+		text-align: left;	
+}
+div.up2 input {
+	width: 70%;
+}
+
+ul.open, div.open {
+    display: block;
+    animation: showEntry 1s linear forwards;
+}
+
+
+
+
+
+.merch {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    margin: 0 auto;
+    
+   }
+
+
+
+a:hover {
+	color: orange;
+}
+
+.foot {
+	  width: 30%;
+    background: #f4f4f4;
+    margin: 1em 1em;
+    text-align: center;
+}
+
+div.foot div {
+	padding: 1em;
+}
+
+.foot-head {
+	font-weight: bold;
+}
+
+.entry_form {
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    width: 30%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #2F4F4F;
+    background: lightgray;
+    display: none;
+    border-radius: 8px;
+}
+
+.entry_form fieldset {
+	border-color: #BDB76B;
+	border-top: 0px;
+	border-right: 0px;
+	border-left: 0px;
+}
+
+.entry_form input {
+	display: block;
+	width: 50%; 
+	margin: 0 auto; 
+	text-align: center;
+}
+
+input {
+	font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid gray;
+  outline: 0;
+  font-size: 1.1rem;
+  color: black;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  border-radius: 5px;
+  text-align: center;
+}
+
+input:focus {
+  background-color: white;
+  color: darkgrey;
+}
+
+legend {
+	font-family: 'Poppins', sans-serif; 
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.button1 {
+	background-color: #2F4F4F;
+	
+	color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 1px;
+  align-content: center;
+  width: 100%;
+
+}
+
+.entry_form label, input {
+	text-align: center;
+
+}
+
+button.close {
+	height: 40px;
+	width: 40px;
+	background: lightgray;
+}
+
+button:hover {
+	color: orange;
+	transform: scale(1.05);
+}
+
+.close{
+
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+}
+
+.close:before,
+.close:after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 10px;
+    width: 26px;
+    height: 4px;
+    background: #000000;
+}
+
+.close:before {
+    webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.close:after {
+    webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.label {
+	font-family: 'Poppins', sans-serif; 
+  	display: block;
+  	color: black;
+  	transition: 0.2s;
+  	font-size: 1.2rem;
+  	text-align: center;
+   
+}
+
+.item {
+    width: 21%;
+    flex-direction: row;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    margin: 1em 0;
+}
+
+.item p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+  height: 35%;
+}
+
+.item a {
+  display: block;
+  height: 15%;
+}
+.item img {
+  height: 40%;
+}
+
+
+.info {
+ 	color: red;
+ 	font-family: 'Poppins', sans-serif; 
+	font-size: 1.0rem;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+ }
+
+footer {
+	clear: both;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+	  background-color: #FFDEAD;
+
+}
+
+/*.footer {
+	flex: 1 0 auto;
+}*/
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+@media screen and (max-width: 480px) {
+
+    body {
+        font-size: 19px;
+    }
+    p.address    
+    {
+        display: none;
+    }
+   
+    p.phone {
+    	flex: 5;
+    }470
+
+    p.game-page
+    {
+    	flex: 3;
+    	font-size: 15px;
+    }
+    aside {
+    	display: none;
+    }
+    .flex-xs-column {
+        flex-direction: column;
+       }
+
+     .item {
+     	width: 80%;
+     	margin: 5px auto;
+     }
+  
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 770px) {
+    
+	
+	body {
+		font-size: 18px;
+	}
+	p.address    
+    {
+        display: none;
+    }
+
+    aside {
+    	display: none;
+    }
+
+    .item {
+       width: 45%;
+		}
+
+}
+
+@media screen  and (min-width: 771px) and (max-width: 960px) {
+    
+    body {
+		font-size: 19px;
+	}
+
+	.item {
+		width: 47%;
+	}
+	
+
+    }

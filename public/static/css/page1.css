@@ -1,0 +1,186 @@
+#slider ul p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+#slider li img {
+	height: 40vh; /* задаем высоту картинке*/
+}
+
+/*центральная часть - меню текст и коробки*/
+
+
+
+.menu a {
+	background: #708090;
+	color: #fff;
+	padding: 10px;
+	display: block;
+	transition: 0.2s;
+}
+
+
+.menu a:hover {
+	background: #666;
+	padding: 10px 0 10px 20px;
+}
+
+
+.menu_list {
+	position: relative;
+}
+
+.menu_drop {
+	position: absolute;
+	width: 100%;
+	left: 100%;
+	top: 0;
+	display: none;
+}
+
+.menu_list:hover .menu_drop {
+	opacity: 1;
+}
+
+
+.menu li:first-child a,
+.menu li .menu_drop li:first-child a
+{
+	border-radius: 3px 3px 0 0; /*- для скругления краев*/
+}
+
+.menu li:last-child a,
+.menu li .menu_drop li:last-child a
+{
+	border-radius: 0px 0px 3px 3px; /*- для скругления краев*/
+	border-bottom: 0;
+}
+
+/*иконки для всплывающих менюшек*/
+
+.menu_list::after {
+	content: "\21D2";
+	color: white;
+	position: absolute;
+	top: 1em;
+	right: 0.7em;
+	transition: 0.3s;
+}
+
+.menu_list:hover::after {
+	transform: scale(1.4);
+}
+
+aside {
+	background: #FFFFE0;
+
+}
+
+/*Для части main*/
+
+main {
+	background: #FFFFE0;
+}
+
+.item {
+    width: 21%;
+    flex-direction: row;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    margin: 1em 0;
+}
+
+
+.item p {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: justify;
+	height: 35%;
+}
+
+.item a {
+	display: block;
+	height: 15%;
+}
+.item img {
+	height: 40%;
+}
+
+div.head {
+	display: block;
+	text-align: center;
+	font-size: 2.5em;
+	font-family: Сomic Sans MS;
+	background-color: #C0C0C0;
+	opacity: 0.9;
+}
+
+
+
+@media screen and (max-width: 480px) {
+
+    body {
+        font-size: 19px;
+    }
+    p.address    
+    {
+        display: none;
+    }
+   
+    p.phone {
+    	flex: 5;
+    }470
+
+    p.game-page
+    {
+    	flex: 3;
+    	font-size: 15px;
+    }
+    aside {
+    	display: none;
+    }
+    .flex-xs-column {
+        flex-direction: column;
+       }
+
+     .item {
+     	width: 80%;
+     	margin: 5px auto;
+     }
+  
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 770px) {
+    
+	
+	body {
+		font-size: 18px;
+	}
+	p.address    
+    {
+        display: none;
+    }
+
+    aside {
+    	display: none;
+    }
+
+    .item {
+       width: 45%;
+		}
+
+}
+
+@media screen  and (min-width: 771px) and (max-width: 960px) {
+    
+    body {
+		font-size: 19px;
+	}
+
+	.item {
+		width: 47%;
+	}
+	
+
+    }

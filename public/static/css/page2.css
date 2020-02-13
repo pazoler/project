@@ -1,0 +1,114 @@
+.column {
+	flex-direction: column;
+}
+
+aside div {
+	display: block;
+	margin: 5px;
+}
+aside label {
+	display: block;
+	margin: 0;
+}
+aside p input {
+	display: inline;
+}
+
+.footer1 {
+justify-content: center;
+}
+
+table {
+	width: 90%;
+	height: 50%;
+	padding: 0;
+}
+
+th {
+	width: 30%;
+}
+
+table, th, td, tr {
+	border: 1px solid black;
+	margin: 0;
+}
+
+th, td, tr {
+	border: 1px solid black;
+	margin: 0;
+	padding: 10px;
+
+}
+
+@media screen and (max-width: 480px) {
+
+    body {
+        font-size: 19px;
+    }
+    p.address    
+    {
+        display: none;
+    }
+   
+    p.phone {
+    	flex: 4;
+    }
+
+    p.game-page
+    {
+    	flex: 3;
+    	font-size: 15px;
+    }
+    aside.right
+     {
+    	display: none;
+    }
+
+    main div {
+    	word-wrap: break-word;
+    	word-break: break-all;
+        }
+
+    main {
+    	flex: 4;
+    }
+
+    aside.left {
+    	flex: 1;
+    }
+    table {display: none;}
+  
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 770px) {
+    
+	
+	body {
+		font-size: 18px;
+	}
+	p.address    
+    {
+        display: none;
+    }
+
+    aside.right {
+    	display: none;
+    }
+     main div {
+    	word-wrap: break-word;
+    	word-break: break-all;
+        }
+
+   
+}
+
+@media screen  and (min-width: 771px) and (max-width: 960px) {
+    
+    body {
+		font-size: 19px;
+	}
+
+		
+
+    }
+

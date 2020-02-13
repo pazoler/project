@@ -1,0 +1,202 @@
+
+/*Теперь вторая строка хэдера с логотипом, поиском и картинкой корзины*/
+	
+
+.button {
+  background-color: #8FBC8F; 
+  border: 2px solid black;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+
+}
+div.flex-1 {
+	margin-left: 10px;
+}
+
+.border-right {
+	border-right: 2px solid black;
+}
+
+.btn-two {
+	display: none;
+}
+
+.btn-three {
+	display: none;
+}
+
+
+
+/*Для части main*/
+
+main {
+	background: #FFFFE0;
+}
+
+
+.item {
+    width: 21%;
+    flex-direction: row;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    margin: 1em 0;
+}
+
+
+.item p {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: justify;
+	height: 35%;
+}
+
+.item a {
+	display: block;
+	height: 15%;
+}
+.item img {
+	height: 40%;
+}
+
+div.head {
+	display: block;
+	text-align: center;
+	font-size: 2.5em;
+	font-family: Сomic Sans MS;
+	background-color: #C0C0C0;
+	opacity: 0.9;
+}
+
+
+a:hover {
+	color: orange;
+}
+
+.foot {
+	width: 30%;
+    background: #f4f4f4;
+    margin: 1em 1em;
+    text-align: center;
+}
+
+div.foot div {
+	padding: 1em;
+}
+
+.foot-head {
+	font-weight: bold;
+}
+
+
+fieldset {
+	border: 0px;
+}
+input {
+	font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid gray;
+  outline: 0;
+  font-size: 1.1rem;
+  color: black;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  border-radius: 5px;
+  text-align: center;
+}
+
+input:focus {
+  background-color: white;
+  color: darkgrey;
+}
+
+div.btn-one {
+	display: none;
+}
+
+div.btn-one div {
+	padding: 10px;
+}
+
+.label, .select p {
+	font-family: 'Poppins', sans-serif; 
+  	display: block;
+  	color: black;
+  	transition: 0.2s;
+  	font-size: 1.2rem;
+  	color: gray;
+  	text-align: center;
+   
+}
+.select p {
+	text-align: left;
+}
+
+legend {
+	font-family: 'Poppins', sans-serif; 
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+.button1 {
+	background-color: #2F4F4F;
+	
+	color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 1px;
+  align-content: center;
+  width: 100%;
+
+}
+
+div.open {
+ 	display: block;
+ }
+
+ .info {
+ 	color: red;
+ 	font-family: 'Poppins', sans-serif; 
+	font-size: 1.0rem;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+ }
+
+ div.select {
+ 	margin: 10px;
+ 	padding: 10px;
+ 	align-items: center;
+ 	text-align: center;
+
+ }
+
+div.select select {
+	
+ 	display: block;
+    width: 60%; /* от ширины блока div */
+    padding: .75rem 2.5rem .75rem 1rem;/* отступы от текста до рамки */
+    background: white;
+    border: 1px solid #ccc; /* рамка */
+    border-radius: 3px;/* скругление полей формы */
+  
+    appearance: none;/* убираем дефолнтные стрелочки */
+    font-family: inherit;/* наследует от родителя */
+    font-size: 1rem;
+    color: #444;
+    right: 20%;
+ }
+
+select option:hover {
+  background: green;
+  color: blue;
+}

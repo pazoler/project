@@ -1,0 +1,69 @@
+{
+
+"urls": {
+	"open main page": {
+		"path": "/",
+		"controller": "Tabletop\\Games\\Controllers\\IndexController::index",
+		"method": "GET"
+	},
+	"open game": {
+		"path": "/game/{id:\\d+}",
+		"controller": "Tabletop\\Games\\Controllers\\GameController::showGame",
+		"method": "GET"
+	},
+	"open second page": {
+		"path": "/table",
+		"controller": "Tabletop\\Games\\Controllers\\TableController::table",
+		"method": "GET"
+	},
+	"registration page": {
+		"path": "/registration",
+		"controller": "Tabletop\\Games\\Controllers\\PersonalController::registration",
+		"method": "GET"
+	},
+	"personal page": {
+		"path": "/personal",
+		"controller": "Tabletop\\Games\\Controllers\\PersonalController::personal",
+		"method": "GET"
+	},
+	"admin page": {
+		"path": "/admin",
+		"controller": "Tabletop\\Games\\Controllers\\AdminController::getPage",
+		"method": "GET"
+	},
+	"add row": {
+		"path": "/addrow",
+		"controller": "Tabletop\\Games\\Controllers\\AdminController::addRow",
+		"method": "POST"
+	},
+	"add game": {
+		"path": "/addgame",
+		"controller": "Tabletop\\Games\\Controllers\\AdminController::addGame",
+		"method": "POST"
+	},
+	"login": {
+		"path": "/login",
+		"controller": "Tabletop\\Games\\Controllers\\PersonalController::login",
+		"method": "POST"
+	},
+	 "add user": {
+      "path": "/adduser",
+      "controller": "Tabletop\\Games\\Controllers\\PersonalController::addUser",
+      "method": "POST"
+    },
+    "logout": {
+		"path": "/logout",
+		"controller": "Tabletop\\Games\\Controllers\\PersonalController::logout",
+		"method": "GET"
+	}
+
+},
+"db": {
+    "server": "127.0.0.1",
+    "dbname": "mydb",
+    "user": "tujn",
+    "pass": "tujnpujn1",
+    "charset": "utf8"
+  }
+
+}
