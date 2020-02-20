@@ -1,7 +1,6 @@
 <div class="flex main">
 	<div class="flex-1 border-right aside">
-		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, quis, quos? Laborum deserunt, quidem harum cumque quas! Nostrum ad doloribus, placeat? Ipsum ullam omnis quae praesentium iste debitis ut sequi!</div>
-		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, blanditiis!</div>
+		<img src="/static/img/registration.png" alt="">
 	</div>
 	<div class="flex-3 information">
 		<div class="flex-1">

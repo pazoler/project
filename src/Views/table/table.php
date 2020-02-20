@@ -1,7 +1,13 @@
 <div class="flex border">
 		<aside class="flex-1 left">
-			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, quis, quos? Laborum deserunt, quidem harum cumque quas! Nostrum ad doloribus, placeat? Ipsum ullam omnis quae praesentium iste debitis ut sequi!</div>
-		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, blanditiis!</div>
+			<div><? foreach($gamess as $game):?>
+
+					<div class="item-side">
+						<img src="static/img/<?echo $game['pic']?>" alt="<?echo $game['pic']?>">
+						<p><?echo $game['shortdescription']?></p>
+						<a class="text-center" href="#"><?echo $game['title']?></a>
+					</div>
+					<?endforeach?></div>
 		</aside>
 		<main class="flex-4 container flex column">
 		<div>Доброго дня!
@@ -20,7 +26,9 @@
 			<tr>
 				<td><?echo $game['place']?></td>
 				<td><?echo $game['game']?></td>
-				<td><?echo $game['date']?></td>
+				<td><?echo $game['date']?> <? if($_SESSION['login'] == 'Admin'):?>
+					<a class="cross" href="/removeRow/<?echo $game['idmeeting_games']?>"></a>
+						<?endif?></td>
 			</tr>
 			<?endforeach?>
 		</table>

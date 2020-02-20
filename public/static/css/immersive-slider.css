@@ -67,10 +67,10 @@ Class Definitions
 }
 
 .immersive_slider .is-slide .image img{
-  height: 85%;
+ /* height: 100%;*/
   max-width: 100%;
   display: block;
-  width: 85%;
+  width: 100%;
 }
 
 .immersive_slider .is-slide .content {

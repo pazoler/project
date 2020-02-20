@@ -6,9 +6,24 @@
 		"controller": "Tabletop\\Games\\Controllers\\IndexController::index",
 		"method": "GET"
 	},
-	"open game": {
-		"path": "/game/{id:\\d+}",
-		"controller": "Tabletop\\Games\\Controllers\\GameController::showGame",
+	"show game": {
+      "path": "/games/{id:\\d+}",
+      "controller": "Tabletop\\Games\\Controllers\\IndexController::showAction",
+      "method": "GET"
+    },
+	"remove game": {
+		"path": "/remove/{id:\\d+}",
+		"controller": "Tabletop\\Games\\Controllers\\IndexController::removeGame",
+		"method": "GET"
+	},
+	"filter 2 players": {
+		"path": "/filternum2",
+		"controller": "Tabletop\\Games\\Controllers\\IndexController::filterNum2",
+		"method": "GET"
+	},
+	"filter 2 players": {
+		"path": "/filternum3",
+		"controller": "Tabletop\\Games\\Controllers\\IndexController::filterNum3",
 		"method": "GET"
 	},
 	"open second page": {
@@ -19,6 +34,16 @@
 	"registration page": {
 		"path": "/registration",
 		"controller": "Tabletop\\Games\\Controllers\\PersonalController::registration",
+		"method": "GET"
+	},
+	"remove reg": {
+		"path": "/regremove/{date:\\S+}",
+		"controller": "Tabletop\\Games\\Controllers\\PersonalController::regRemove",
+		"method": "GET"
+	},
+	"remove row": {
+		"path": "/removeRow/{id:\\d+}",
+		"controller": "Tabletop\\Games\\Controllers\\TableController::removeRow",
 		"method": "GET"
 	},
 	"personal page": {
@@ -49,6 +74,16 @@
 	 "add user": {
       "path": "/adduser",
       "controller": "Tabletop\\Games\\Controllers\\PersonalController::addUser",
+      "method": "POST"
+    },
+    "user info add": {
+      "path": "/userInfo",
+      "controller": "Tabletop\\Games\\Controllers\\PersonalController::userInfo",
+      "method": "POST"
+    },
+    "add note": {
+      "path": "/addNote",
+      "controller": "Tabletop\\Games\\Controllers\\PersonalController::addNote",
       "method": "POST"
     },
     "logout": {

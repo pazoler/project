@@ -1,7 +1,13 @@
 <div class="flex main">
 	<div class="flex-1 border-right aside">
-		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, quis, quos? Laborum deserunt, quidem harum cumque quas! Nostrum ad doloribus, placeat? Ipsum ullam omnis quae praesentium iste debitis ut sequi!</div>
-		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, blanditiis!</div>
+					<? foreach($games as $game):?>
+
+					<div class="item-side">
+						<img src="static/img/<?echo $game['pic']?>" alt="<?echo $game['pic']?>">
+						<p><?echo $game['shortdescription']?></p>
+						<a class="text-center" href="/games/<?echo $game['idpurchase']?>"><?echo $game['title']?></a>
+					</div>
+					<?endforeach?>
 	</div>
 	<div class="flex-3 information">
 		<div class="flex-1">
@@ -10,28 +16,28 @@
 			<button class="button three">Запись на игру</button>
 		</div>
 		<div class="flex-4 btn-one">
-			<form action="" name="personal">
+			<form action="/userInfo" name="personal" method="POST">
 							<fieldset>
 								<legend></legend>
 								<div class="group">
 									<label for="email" class="label">Ваш email: </label>
-									<input name='email' type="email" id="email" placeholder="email@email.com" required="">
+									<input name='email' type="email" id="email" placeholder="email@email.com" required="" value="<?echo $info['email']?>">
 									<p class="info"></p>
 								</div>
 								<div class="group">
 									<label for="tel" class="label">Номер телефона: </label>
-									<input name='tel' type="tel" id="tel" placeholder="Phone number" required="" autofocus="">
+									<input name='tel' type="tel" id="tel" placeholder="Phone number" required="" autofocus="" value="<?echo $info['phone']?>">
 									<p class="info"></p>
 								</div>
 								
 								<div class="group">
 									<label for="surname" class="label">Фамилия: </label>	
-									<input name='surname' type="text" id="surname" placeholder="Фамилия" required="">
+									<input name='surname' type="text" id="surname" placeholder="Фамилия" required="" value="<?echo $info['surname']?>">
 									<p class="info"></p>
 								</div>
 								<div class="group">
 									<label for="name" class="label">Имя: </label>	
-									<input name='name' type="text" id="name" placeholder="Имя" required="">
+									<input name='name' type="text" id="name" placeholder="Имя" required="" value="<?echo $info['name']?>">
 									<p class="info"></p>
 								</div>
 
@@ -40,32 +46,56 @@
 							</fieldset>
 			</form>
 		</div>
-		<div class="flex-4 btn-two">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt suscipit reprehenderit totam distinctio voluptatum eligendi, quisquam magnam non numquam debitis? Modi nesciunt nobis iste cum inventore praesentium, exercitationem quaerat quam?</div>
+		<div class="flex-4 btn-two"> 
+			<h3>Данные по записям: <?echo $notes['place']?></h3>
+		 <? if(isset($notes)):?>
+		 <table>
+			<tr>
+				<th>Место сбора</th>
+				<th>Игра</th>
+				<th>Дата/время</th>
+			</tr>
+			
+			<? foreach($notes as $note):?>
+			<tr>
+				<td><?echo $note['place']?></td>
+				<td><?echo $note['game']?></td>
+				<td><?echo $note['date']?><a class="cross" href="/regremove/<?echo $note['date']?>"></a></td>
+			</tr>
+			<?endforeach?>
+		</table>
+		<?else:?>
+		<h4>Записи отсутствуют.</h4>
+		<?endif?>
+     	
+     </div>
 
 		<div class="flex-4 btn-three">
-			<form action="">
+			<form action="/addNote" method="POST">
 			<fieldset>
 			<legend align="center">Данные для записи</legend>
 			
 			<label for="date" class="label">Дата для записи</label>
-				<input type="date" required="" id="date" min="2020-02-22" step="7">
-			
+				<input name="date" type="date" required="" id="date" min="2020-02-22" step="7">
+			<? if($result):?>
+				<h3><?echo $result?></h3>
+				 <?endif?>
 			<div class="select">
 				<p>Выбор игры:</p>
 				<select class="select1" name="game" id="">
-				<option value="1">Хару Ичибан</option>
-				<option value="2">Антимонополия</option>
-				<option value="3" selected="">Photosynthesis</option>
-				<option value="4">Otys</option>
-				<option value="5">Magic the Gathering</option>
+				<option value="Хару Ичибан">Хару Ичибан</option>
+				<option value="Антимонополия">Антимонополия</option>
+				<option value="Photosynthesis" selected="">Photosynthesis</option>
+				<option value="Otys">Otys</option>
+				<option value="Magic the Gathering">Magic the Gathering</option>
 			</select>
 			<p>Выбор места:</p>
 				<select class="select2" name="place" id="">
-				<option value="1">Цифербург</option>
-				<option value="2">Циферблат</option>
-				<option value="3" selected="">Типичный Питер</option>
-				<option value="4">«О’Лень!»</option>
-				<option value="5">"Freak-zone"</option>
+				<option value="Цифербург">Цифербург</option>
+				<option value="Циферблат">Циферблат</option>
+				<option value="Типичный Питер" selected="">Типичный Питер</option>
+				<option value="«О’Лень!»">«О’Лень!»</option>
+				<option value="Freak-zone">"Freak-zone"</option>
 			</select>
 
 			</div>

@@ -4,8 +4,7 @@ let button3 = document.querySelectorAll('.three');
 let menu1 = document.querySelectorAll('.btn-one');
 let menu2 = document.querySelectorAll('.btn-two');
 let menu3 = document.querySelectorAll('.btn-three');
-console.log(menu1);
-console.log(menu2);
+
 
 for (btn of button1) {
 	
@@ -75,11 +74,8 @@ let formPer = document.forms.personal;
 let telPer = formPer.elements.tel;
 let surnamePer = formPer.elements.surname;
 let namePer = formPer.elements.name;
-console.log(name);
-telPer.value = 'Здесь будет из БД Телефон';
-surnamePer.value = 'Здесь будет из БД Фамилия';
-namePer.value = 'Здесь будет из БД Имя';
-console.log(namePer.value.length);
+
+
 check = namePer.value;
 
 
@@ -89,12 +85,9 @@ check = namePer.value;
 formPer.addEventListener("submit", takeFormPer);
 
 function takeFormPer(event) {
-	event.preventDefault(); //отменяет отправку формы
+	event.preventDefault(); 
 	console.log("отправка формы");
-	// this - форма
-	console.log(namePer.value.length);
-	
-	console.log(namePer.nextElementSibling);
+
 	let formData = new FormData(this);
 
 	let n = 0;
@@ -120,15 +113,6 @@ function takeFormPer(event) {
 	}
 
 	if (n>0) return false;
-
-	let request = new XMLHttpRequest();
-//составляем аякс запрос и отправляем на сервер
-	request.open("POST", "/login", true);
-	request.send(data);
-	//когда придет ответ придет следующая функция
-	request.onload = function () {
-		if(request.status === 200) {
-			// responseHandler(request.responseText); //responseHandler надо писать
-		}
-	}
+	
+ 	formPer.removeEventListener("submit", takeFormPer);
 }

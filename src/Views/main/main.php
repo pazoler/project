@@ -4,38 +4,19 @@
 		<div class="main">
       <div class="page_container">
         <div id="immersive_slider">
-          <div class="slide" data-blurred="picture/pic1.jpg">
+          <? foreach($slider as $slide):?>
+          <div class="slide" data-blurred="static/img/<?echo $slide['pic']?>">
             <div class="content">
-              <h2><a href="http://www.bucketlistly.com" target="_blank">BucketListly</a></h2>
-              <p>It’s never been easier to watch YouTube on the big screen
-              Send your favorite YouTube videos from your Android phone or tablet to TV with the touch of a button. It’s easy. No wires, no setup, no nothing. Find out more here.</p>
+              <h2><a href="/games/<?echo $slide['idpurchase']?>" target="_blank"><?echo $slide['title']?></a></h2>
+              <p><?echo $slide['shortdescription']?></p>
             </div>
             <div class="image">
-              <a href="http://www.bucketlistly.com" target="_blank">
-                <img src="picture/pic1.jpg" alt="Slider 1">
+              <a href="/games/<?echo $slide['idpurchase']?>" target="_blank">
+                <img src="static/img/<?echo $slide['pic']?>" alt="Slider" width="100%" height="auto">
               </a>
             </div>
           </div>
-          <div class="slide" data-blurred="picture/pic2.jpg">
-            <div class="content">
-              <h2><a href="http://www.bucketlistly.com/apps" target="_blank">BucketListly Apps</a></h2>
-              <p>It’s never been easier to watch YouTube on the big screen
-              Send your favorite YouTube videos from your Android phone or tablet to TV with the touch of a button. It’s easy. No wires, no setup, no nothing. Find out more here.</p>
-            </div>
-            <div class="image">
-             <a href="http://www.bucketlistly.com/apps" target="_blank"> <img src="picture/pic2.jpg" alt="Slider 1"></a>
-            </div>
-          </div>
-          <div class="slide" data-blurred="picture/pic1.jpg">
-            <div class="content">
-              <h2><a href="http://www.thepetedesign.com" target="_blank">The Pete Design</a></h2>
-              <p>It’s never been easier to watch YouTube on the big screen
-              Send your favorite YouTube videos from your Android phone or tablet to TV with the touch of a button. It’s easy. No wires, no setup, no nothing. Find out more here.</p>
-            </div>
-            <div class="image">
-              <a href="http://www.thepetedesign.com" target="_blank"><img src="picture/pic1.jpg" alt="Slider 1"></a>
-            </div>
-          </div>
+          <?endforeach?>
           
           <a href="#" class="is-prev">&laquo;</a>
           <a href="#" class="is-next">&raquo;</a>
@@ -75,8 +56,8 @@
 			</li>
 			<li class="menu_list"><a class="show" href="#">Число игкроков</a>
 				<ul class="menu_drop">
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
+					<li><a href="/filternum2">2</a></li>
+					<li><a href="/filternum3">3</a></li>
 					<li><a href="#">4</a></li>
 					<li><a href="#">5</a></li>
 					<li><a href="#">6 и более</a></li>
@@ -107,37 +88,16 @@
 		<main class="flex-4">
 			<section class="flex merch container flex-xs-column">
 															
+					<? foreach($games as $game):?>
 					<div class="item">
-						<img src="picture/haru.jpg" alt="Хару Ичибан">
-						<p>Хару Ичибан – это сражение двух умов, которое по праву входит в топ-100 абстрактных игр</p>
-						<a class="text-center" href="#">Подробнее</a>
+						<? if($_SESSION['login'] == 'Admin'):?>
+					<a class="cross" href="/remove/<?echo $game['idpurchase']?>"></a>
+						<?endif?>
+						<img src="static/img/<?echo $game['pic']?>" alt="<?echo $game['pic']?>">
+						<p><?echo $game['shortdescription']?></p>
+						<a class="text-center" href="/games/<?echo $game['idpurchase']?>"><?echo $game['title']?></a>
 					</div>
-					<div class="item">
-						<img src="picture/another.jpg" alt="">
-						<p>Вы предводитель колонии, пережившей ядерный апокалипсис. Вас с друзьями ждет настоящая гонка на выживание</p>
-						<a class="text-center" href="#">Подробнее</a>
-					</div>
-					<div class="item">
-						<img src="picture/anti.jpg" alt="">
-						<p>Пришло время избавиться от монополистического ига и доказать, что здоровая конкуренция на рынке недвижимости – это новый двигатель прогресса</p>
-						<a class="text-center" href="#">Подробнее</a>
-					</div>
-					<div class="item">
-						<img src="picture/photo.jpg" alt="">
-						<p>Cамая настоящая стратегия, но с несколько нестандартными игровыми элементами</p>
-						<a class="text-center" href="#">Подробнее</a>
-					</div>
-	
-					<div class="item">
-						<img src="picture/otys.jpg" alt="">
-						<p>Добро пожаловать в середину 22 века! После 300 лет процветания и благополучия, царивших в мире, вода поглотила последние остатки суши.</p>
-						<a class="text-center" href="#">Подробнее</a>
-					</div>
-					<div class="item">
-						<img src="picture/magic.jpg" alt="">
-						<p>Коллекционная карточная игра и логическая карточная игра...</p>
-						<a class="text-center" href="#">Подробнее</a>
-					</div>
+					<?endforeach?>
 			</section>
 				
 				<div class="entry_form">

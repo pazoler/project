@@ -13,11 +13,43 @@ body {
     height: 100%;
 }
 
+
 img {
 	width: 100%;
 	height: auto;
 }
 
+
+div.game {
+  align-content: center;
+  align-items: center;
+}
+div.game img {
+  width: 400px;
+  height: 400px;
+  align-content: center;
+  align-items: center;
+  display: block;
+  margin: 0 auto;
+}
+
+div.image a {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+div.image a img {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.image {
+    width: 100%;
+    flex-direction: row;
+    box-sizing: border-box;
+    background: #f4f4f4;
+    margin: 1em 0;
+}
 p {
 	word-break: all;
 	word-wrap: break-word;
@@ -77,6 +109,29 @@ border: 1px solid black;
     margin: 0 auto;
 }
 
+.cross {
+position: absolute;
+width: 16px;
+height: 16px;
+opacity: 0.5;
+}
+.cross:hover {
+opacity: 1;
+}
+.cross:before, .cross:after {
+position: absolute;
+right: 10%;
+content: ' ';
+height: 25px;
+width: 2px;
+background-color: red;
+}
+.cross:before {
+transform: rotate(45deg);
+}
+.cross:after {
+transform: rotate(-45deg);
+}
 
 a {
 	text-decoration: none;
@@ -315,6 +370,7 @@ button:hover {
 }
 
 .item {
+
     width: 21%;
     flex-direction: row;
     box-sizing: border-box;
